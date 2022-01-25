@@ -4,5 +4,6 @@
 
  <%= f.input :name %>
  <%= f.input :image_url, input_html: {value: ""}%>
- <%= f.submit class: 'btn btn-primary' %>
+  <%= f.input :photo, as: :file %>
+  <%= f.submit class: 'btn btn-primary' %>
 <% end %>
