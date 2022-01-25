@@ -1,1 +1,21 @@
-<h1>Your list</h1>
+<div class="banner">
+
+  <div class="content">
+    <h1><%= @list.name %></h1>
+  </div>
+</div>
+
+<div class="container">
+<h2>Add movie</h2>
+<%= link_to "Add movie", new_list_path, class: "btn btn-primary"%>
+</div>
+
+<div class="container">
+    <div class="cards">
+      <% @movies.each do |movie|  %>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url( <%= movie.poster_url %>)">
+        <%= movie.title %>
+      </div>
+    <% end %>
+    </div>
+</div>
