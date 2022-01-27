@@ -1,3 +1,35 @@
+.card-category {
+  display: flex;
+  background-size: cover;
+  background-position: center;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  width: 400px;
+  height: 200px;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  position: relative;
+
+
+.delete {
+  border: 3px solid #ad2128;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+
+}
+ a {
+    color: white;
+  }
+a:hover {
+    text-decoration: none;
+    color: rgb(136, 121, 121);
+}
+
+
 
 .card-product {
   overflow: hidden;
