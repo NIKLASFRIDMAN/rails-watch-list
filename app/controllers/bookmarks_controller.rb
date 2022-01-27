@@ -4,7 +4,6 @@ class BookmarksController < ApplicationController
     @bookmarks = Bookmark.all
   end
 
-
   def new
     @list = List.find params[:list_id]
     @bookmark = Bookmark.new
@@ -21,7 +20,7 @@ class BookmarksController < ApplicationController
     end
   end
 
-   def destroy
+  def destroy
     @bookmark = Bookmark.find(params[:id])
     @bookmark.destroy
     redirect_to root_path
