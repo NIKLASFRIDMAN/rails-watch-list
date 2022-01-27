@@ -14,12 +14,17 @@
 
 <div class="container">
     <div class="cards">
-      <% @list.bookmarks.each do |bookmark|  %>
-      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url( <%= bookmark.movie.poster_url %>)">
-        <%= bookmark.movie.title %>
-         <div class="delete"><%= link_to "Delete", new_list_bookmark_path(bookmark.id), method: :delete %></div>
-      </div>
+        <% @list.bookmarks.each do |bookmark|  %>
+        <div class="card-product">
+          <img src="<%= bookmark.movie.poster_url %>" />
+          <div class="card-product-infos">
+            <h2> <%= bookmark.movie.title %></h2>
+            <p><%= bookmark.movie.overview %></p>
+            <div class="delete"><%= link_to "Delete", new_list_bookmark_path(bookmark.id), method: :delete %></div>
+             <p class="bookmarkcomment"><%= bookmark.comment %></p>
 
-    <% end %>
+          </div>
+        </div>
+        <% end %>
     </div>
 </div>

@@ -10,27 +10,15 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
   </head>
 
 
   <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <%= image_tag "movielogo.jpeg", alt: "My List", width: 50 %>
 
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-     <li class="nav-item">
-      <%= link_to "Create a List", new_list_path, class: "nav-link"%>
-      </li>
-      <li class="nav-item">
-      <%= link_to "All Lists", lists_path, class: "nav-link"%>
-      </li>
-    </ul>
-  </div>
-</nav>
+   <%= render "components/navbar" %>
+
     <%= yield %>
   </body>
+      <%= render "components/footer" %>
 </html>
